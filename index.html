@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Weather App Redesign</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <!-- Header para el fondo -->
+    <div class="weather-container">
+        <img src="./storage/img/background.png" alt="Fondo de clima" class="background-image">
+    
+        <!-- Barra de búsqueda encima del fondo -->
+        <div class="search-bar">
+            <button id="search-btn">
+                <img src="./storage/img/search_white.png" alt="Buscar" class="search-icon">
+            </button>
+            <input type="text" id="search-city" placeholder="Buscar ciudad..." class="hidden-input">
+        </div>
+    
+        <div class="weather-info">
+            <img id="weather-icon" src="" alt="Ícono del clima" class="weather-icon">
+            <h1 id="location">Kharkiv, Ucrania</h1>
+            <div class="temperature-feels">
+                <h2 id="temperature">3°C</h2>
+                <p>Feels like <span id="feels-like">-2°C</span></p>
+                <p id="condition">Cloudy</p>
+                <p id="time">January 18, 16:14</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <button id="today-btn">Today</button>
+        <button id="tomorrow-btn">Tomorrow</button>
+        <button id="ten-days-btn">10 Days</button>
+    </div>
+
+    <div class="additional-info-container">
+        <div class="info-item">
+            <img src="./storage/img/air.png" alt="Wind Icon" class="info-icon">
+            <div class="info-text">
+                <span class="info-label">Wind Speed:</span>
+                <span id="wind-speed">10 km/h</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <img src="./storage/img/rainy.png" alt="Rain Icon" class="info-icon">
+            <div class="info-text">
+                <span class="info-label">Rain Chance:</span>
+                <span id="rain-chance">20%</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <img src="./storage/img/waves.png" alt="Pressure Icon" class="info-icon">
+            <div class="info-text">
+                <span class="info-label">Pressure:</span>
+                <span id="pressure">1013 hPa</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <img src="./storage/img/light_mode.png" alt="UV Icon" class="info-icon">
+            <div class="info-text">
+                <span class="info-label">UV Index:</span>
+                <span id="uv-index">5</span>
+            </div>
+        </div>
+    </div>
+
+<!-- Contenedor de pronóstico horario -->
+
+<!-- Contenedor del pronóstico horario -->
+<div class="hourly-forecast-container">
+    <div class="title-container">
+        <img src="/storage/img/history_toggle_off.png" alt="Clock Icon" class="forecast-icon">
+        <h3>Hourly Forecast</h3>
+    </div>
+    <div class="hourly-forecast">
+        <div class="hour-item">
+            <span class="hour-label">12:00</span>
+            <img src="./storage/img/sunny.png" alt="Weather Icon" class="hour-icon">
+            <span class="hour-temp">25°C</span>
+        </div>
+        <div class="hour-item">
+            <span class="hour-label">13:00</span>
+            <img src="./storage/img/cloudy.png" alt="Weather Icon" class="hour-icon">
+            <span class="hour-temp">26°C</span>
+        </div>
+        <div class="hour-item">
+            <span class="hour-label">14:00</span>
+            <img src="./storage/img/rainy.png" alt="Weather Icon" class="hour-icon">
+            <span class="hour-temp">24°C</span>
+        </div>
+        <div class="hour-item">
+            <span class="hour-label">15:00</span>
+            <img src="./storage/img/sunny.png" alt="Weather Icon" class="hour-icon">
+            <span class="hour-temp">27°C</span>
+        </div>
+        <div class="hour-item">
+            <span class="hour-label">16:00</span>
+            <img src="./storage/img/cloudy.png" alt="Weather Icon" class="hour-icon">
+            <span class="hour-temp">25°C</span>
+        </div>
+        <div class="hour-item">
+            <span class="hour-label">17:00</span>
+            <img src="./storage/img/rainy.png" alt="Weather Icon" class="hour-icon">
+            <span class="hour-temp">24°C</span>
+        </div>
+    </div>
+</div>
+
+<div class="rain-chance-container">
+    <div class="title-container">
+        <img src="/storage/img/rainy.png" alt="Clock Icon" class="forecast-icon">
+        <h3>Chance of rain</h3>
+    </div>
+    <div class="rain-chance-graph"></div>
+</div>
+
+<div class="sun-times">
+        <div class="info-item2">
+            <img src="/storage/img/nights_stay.png" alt="Sunrise Icon" class="info-icon2">
+            <div class="info-text2">
+                <span class="info-label2">Sunrise:</span>
+                <span id="sunrise-time"></span>
+            </div>
+        </div>
+        <div class="info-item2">
+            <img src="/storage/img/bounding_box.png" alt="Sunset Icon" class="info-icon2">
+            <div class="info-text2">
+                <span class="info-label2">Sunset:</span>
+                <span id="sunset-time"></span>
+            </div>
+        </div>
+</div>
+
+<div class="scrollable">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</body>
+</html>
